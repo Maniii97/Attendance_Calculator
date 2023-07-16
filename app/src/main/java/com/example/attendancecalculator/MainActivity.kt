@@ -11,8 +11,6 @@ import kotlin.math.floor
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -33,8 +31,6 @@ class MainActivity : AppCompatActivity() {
                     .toInt() < presentcls.text.toString().toInt()) {
                 Toast.makeText(this, "Please Enter a Valid Input", Toast.LENGTH_LONG).show()
             }
-
-
             else {
                 val presentc = presentcls.text.toString().toInt()
                 val totalc = totalcls.text.toString().toInt()
@@ -53,8 +49,6 @@ class MainActivity : AppCompatActivity() {
                     it.putExtra("Extra_required", required)
                     it.putExtra("Extra_Bunk", bunk)
                     startActivity(it)
-
-
                 }
             }
         }

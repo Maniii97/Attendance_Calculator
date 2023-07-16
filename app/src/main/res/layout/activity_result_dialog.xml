@@ -3,67 +3,64 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="380dp"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".ResultDialog">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blue"
-        android:orientation="vertical">
+        app:cardCornerRadius="20dp">
 
-        <TextView
-            android:id="@+id/tvResult"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:gravity="center"
-            android:text="Results"
-            android:textColor="@color/white"
-            android:fontFamily="@font/poppins_medium"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:background="@color/blue"
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/mri1"
-            android:layout_gravity="center"></ImageView>
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="Results"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <View
-            android:layout_width="10dp"
-            android:layout_height="20dp"
-            android:layout_weight="2"></View>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mri1"
+                android:layout_gravity="center" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnCalculate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="95dp"
-            android:layout_marginRight="95dp"
-            android:layout_weight="1.5"
-            android:background="@drawable/button_2"
-            android:fontFamily="@font/poppins_medium"
-            android:gravity="center"
-            android:text="RECALCULATE"
-            android:textAllCaps="false"
-            android:textColor="@color/blue"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="95dp"
+                android:layout_marginRight="95dp"
+                android:background="@drawable/button_2"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:text="RECALCULATE"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:textAllCaps="false"
+                android:textColor="@color/blue"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
-        <View
-            android:layout_width="20dp"
-            android:layout_height="15dp"></View>
-    </LinearLayout>
+        </LinearLayout>
 
-
-
+    </androidx.cardview.widget.CardView>
 
 
 
