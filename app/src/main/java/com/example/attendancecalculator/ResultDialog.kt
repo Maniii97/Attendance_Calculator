@@ -32,14 +32,13 @@ class ResultDialog : AppCompatActivity() {
         if (bunk > 0) {
             setContentView(R.layout.result_dialog0)
         }
-
-        if (required in 6..11) {
+        else if (required in 6..11) {
             setContentView(R.layout.result_dialog1)
         } else if (required in 12..17) {
             setContentView(R.layout.result_dialog2)
         } else if (required > 17) {
             setContentView(R.layout.result_dialog3)
-        } else if(required in 1..6) {
+        } else if(required in 0..6) {
             setContentView(R.layout.activity_result_dialog)
 
         }
