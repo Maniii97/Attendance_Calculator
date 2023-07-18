@@ -29,22 +29,20 @@ class ResultDialog : AppCompatActivity() {
 
 
 
-        if (bunk > 0) {
+        if (bunk > 0 && required==0) {
             setContentView(R.layout.result_dialog0)
-        }
-        else if (required in 6..11) {
+        } else if (required in 6..11) {
             setContentView(R.layout.result_dialog1)
         } else if (required in 12..17) {
             setContentView(R.layout.result_dialog2)
         } else if (required > 17) {
             setContentView(R.layout.result_dialog3)
-        } else if(required in 0..6) {
+        } else  {
             setContentView(R.layout.activity_result_dialog)
 
         }
 
         var result: String = ""
-
 
 
         if (required == 0) {
@@ -64,9 +62,8 @@ class ResultDialog : AppCompatActivity() {
         else{
             result ="You need to attend $required more classes to attain 75% attendance \n" +
                     "Current Attendance : $presentc/$totalc = $cAttn% \n" +
-                    "Required Attendance : $req/$total = $nAttn% \n"
+                    "Required Attendance : $req/$total = $nAttn%"
         }
-
 
         val tvResult = findViewById<TextView>(R.id.tvResult)
         tvResult.text=result
