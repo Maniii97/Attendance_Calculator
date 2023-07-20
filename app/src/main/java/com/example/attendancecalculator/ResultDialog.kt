@@ -45,12 +45,21 @@ class ResultDialog : AppCompatActivity() {
         var result: String = ""
 
 
-        if (required == 0) {
+        if (required == 0 && bunk!=1) {
             result =
                     "You already have 75% attendance. \n" +
                     "You can bunk $bunk more classes and still have 75% attendance. \n " +
                     "Current Attendance : $presentc/$totalc = $cAttn% \n" +
                     "Attendance then : $presentc/$total = $nAttn%\n"
+
+        }
+        else if (required == 0 && bunk == 1){
+            result =
+                "You already have 75% attendance. \n" +
+                        "You can bunk $bunk more class and still have 75% attendance. \n " +
+                        "Current Attendance : $presentc/$totalc = $cAttn% \n" +
+                        "Attendance then : $presentc/$total = $nAttn%"
+
 
         }
         else if (required == 1) {
