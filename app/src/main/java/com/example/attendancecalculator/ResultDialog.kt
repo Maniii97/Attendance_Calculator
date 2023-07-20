@@ -50,7 +50,7 @@ class ResultDialog : AppCompatActivity() {
                     "You already have 75% attendance. \n" +
                     "You can bunk $bunk more classes and still have 75% attendance. \n " +
                     "Current Attendance : $presentc/$totalc = $cAttn% \n" +
-                    "Attendance then : $presentc/$total = $nAttn%\n"
+                    "Attendance then : $presentc/$total = $nAttn%"
 
         }
         else if (required == 0 && bunk == 1){
@@ -66,7 +66,7 @@ class ResultDialog : AppCompatActivity() {
             result =
                 "You need to attend $required more class to attain 75% attendance \n" +
                         "Current Attendance : $presentc/$totalc = $cAttn% \n" +
-                        "Required Attendance : $req/$total = $nAttn% \n"
+                        "Required Attendance : $req/$total = $nAttn%"
         }
         else{
             result ="You need to attend $required more classes to attain 75% attendance \n" +
