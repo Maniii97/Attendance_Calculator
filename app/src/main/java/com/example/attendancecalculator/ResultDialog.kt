@@ -28,7 +28,7 @@ class ResultDialog : AppCompatActivity() {
 
 
 
-
+        // layout based on your attendance with appropriate memes
         if (bunk > 0 && required==0) {
             setContentView(R.layout.result_dialog0)
         } else if (required in 6..11) {
@@ -39,12 +39,12 @@ class ResultDialog : AppCompatActivity() {
             setContentView(R.layout.result_dialog3)
         } else  {
             setContentView(R.layout.activity_result_dialog)
-
         }
+
 
         var result: String = ""
 
-
+        // different result messages
         if (required == 0 && bunk!=1) {
             result =
                     "You already have 75% attendance. \n" +

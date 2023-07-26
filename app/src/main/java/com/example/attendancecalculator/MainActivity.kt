@@ -31,16 +31,17 @@ class MainActivity : AppCompatActivity() {
                     .toInt() < presentcls.text.toString().toInt()) {
                 Toast.makeText(this, "Please Enter a Valid Input", Toast.LENGTH_LONG).show()
             }
+
             else {
                 val presentc = presentcls.text.toString().toInt()
                 val totalc = totalcls.text.toString().toInt()
 
                 if (presentc < (ceil(0.75 * totalc).toInt())) {
-                     required = ceil(((0.75 * totalc) - presentc) / 0.25).toInt()
+                     required = ceil(((0.75 * totalc) - presentc) / 0.25).toInt()     // logic for calculating required days for completing attendance
                 }
                 else {
                     required = 0
-                    bunk = floor(((100*presentc - 75*totalc)/75).toDouble()).toInt()
+                    bunk = floor(((100*presentc - 75*totalc)/75).toDouble()).toInt()     // logic for calculating number of bunks possible maintaining 75% attendance
                 }
 
                 Intent(this, ResultDialog::class.java).also {
